@@ -5,7 +5,7 @@ module Scripturable
 
   module ClassMethods
     def acts_as_scripturable
-      has_one :scripture_reference
+      has_one :scripture_reference, :as => :scripturable, :dependent => :destroy
     end
   end
 
