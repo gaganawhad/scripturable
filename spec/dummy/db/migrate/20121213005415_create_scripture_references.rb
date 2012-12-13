@@ -3,7 +3,8 @@ class CreateScriptureReferences < ActiveRecord::Migration
     create_table :scripture_references do |t|
       t.references :scripturable, :polymorphic => true
       t.integer :scripturable_id
-      t.string :starting_verse
+      t.string :start_verse
+      t.string :end_verse
       t.timestamps
     end
 
