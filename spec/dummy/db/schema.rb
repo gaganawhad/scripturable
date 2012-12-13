@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20121203004115) do
+ActiveRecord::Schema.define(:version => 20121213005415) do
 
   create_table "resources", :force => true do |t|
     t.string   "title"
@@ -22,7 +22,8 @@ ActiveRecord::Schema.define(:version => 20121203004115) do
   create_table "scripture_references", :force => true do |t|
     t.integer  "scripturable_id"
     t.string   "scripturable_type"
-    t.string   "starting_verse"
+    t.string   "start_verse"
+    t.string   "end_verse"
     t.datetime "created_at",        :null => false
     t.datetime "updated_at",        :null => false
   end
