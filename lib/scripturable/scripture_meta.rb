@@ -1,4 +1,4 @@
-[{"id"=>1,
+SCRIPTURE_META = [{"id"=>1,
   "abbrev"=>"GEN",
   "name"=>"Genesis",
   "chapters"=>
