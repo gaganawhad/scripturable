@@ -1,3 +1,4 @@
+module Scripturable
 SCRIPTURE_META = [{"id"=>1,
     "abbrev"=>"GEN",
     "name"=>"Genesis",
@@ -1445,4 +1446,4 @@ SCRIPTURE_META = [{"id"=>1,
       {"id"=>20, "verse_count"=>15},
       {"id"=>21, "verse_count"=>27},
       {"id"=>22, "verse_count"=>21}]}]
-
+end
