@@ -5,9 +5,9 @@ class ScriptureReference < ActiveRecord::Base
 
   validates_presence_of :start_at
   validates :start_at, :format => {:with => REFERENCE_FORMAT, 
-    :message => "start reference should be of the format '<book-number>(:<chapter-number>(:<verse-number>))" }
+    :message => "start reference should follow the format '<book-number>(:<chapter-number>(:<verse-number>))" }
   validates :end_at, :format => {:with => REFERENCE_FORMAT, 
-    :message => "end reference should be of the format '<book-number>(:<chapter-number>(:<verse-number>))" }
+    :message => "end reference should follow the format '<book-number>(:<chapter-number>(:<verse-number>))" }
 
   def start_book
     @start_book ||= initialize_start_reference_params['book']
