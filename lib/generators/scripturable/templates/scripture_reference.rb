@@ -47,7 +47,7 @@ class ScriptureReference < ActiveRecord::Base
 
   def parse_reference reference
     raise "Scripture reference does not follow the format: '<book-number>(:<chapter-number>(:<verse-number>))'" unless follows_format? reference
-    Hash[['book', 'chapter', 'verse'].zip(reference.scan(REFERENCE_FORMAT).flatten.map(&:to_i))]
+    Hash[['book_number', 'chapter_number', 'verse_number'].zip(reference.scan(REFERENCE_FORMAT).flatten.map(&:to_i))]
   end
 
   def follows_format? reference
