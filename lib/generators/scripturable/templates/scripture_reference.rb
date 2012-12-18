@@ -10,56 +10,48 @@ class ScriptureReference < ActiveRecord::Base
     :message => "end reference should follow the format '<book-number>(:<chapter-number>(:<verse-number>))" }
 
   def start_book
-    @start_book ||= initialize_start_reference_params['book']
+    start_reference['book']
   end
   
   def start_chapter
-    @start_book ||= initialize_start_reference_params['chapter']
+    start_reference['chapter']
   end
 
   def start_verse
-    @start_book ||= initialize_start_reference_params['verse']
+    start_reference['verse']
+  end
+
+  def start_reference
+    raise 'start_at value not set for the object' if start_at.blank?
+    @start_reference ||= parse_reference start_at
   end
 
   def end_book
-    @end_book ||= initialize_end_reference_params['book']
+    end_reference['book']
   end
 
   def end_chapter
-    @end_chapter ||= initialize_end_reference_params['chapter']
+    end_reference['chapter']
   end
 
   def end_verse
-    @end_verse ||= initialize_end_reference_params['verse']
+    end_reference['verse']
   end
 
+  def end_reference
+    raise 'end_at value not set for the object' if end_at.blank?
+    @end_reference ||= parse_reference end_at
+  end
   
   private
 
-  def initialize_start_reference_params
-    raise 'start_at value not set for the object' if start_at.blank?
-    @start_book, @start_chapter, @start_verse = parse_reference(start_at)
-    reference_hash start_at
-  end
-
-  def initialize_end_reference_params
-    raise 'end_at value not set for the object' if end_at.blank?
-    @end_book, @end_chapter, @end_verse = parse_reference(end_at)
-    reference_hash end_at
-  end
-
-  def reference_hash reference
-      Hash[['book', 'chapter', 'verse'].zip(parse_reference(reference))]
-  end
-
   def parse_reference reference
     raise "Scripture reference does not follow the format: '<book-number>(:<chapter-number>(:<verse-number>))'" unless follows_format? reference
-    reference.scan(REFERENCE_FORMAT).flatten.map(&:to_i)
+    Hash[['book', 'chapter', 'verse'].zip(reference.scan(REFERENCE_FORMAT).flatten.map(&:to_i))]
   end
 
   def follows_format? reference
     reference.scan(REFERENCE_FORMAT).any?
   end
-
 
 end
