@@ -10,6 +10,7 @@ module Scripturable
 
     def create_model_file
       template "scripture_reference.rb", "app/models/scripture_reference.rb"
+      template "scripture_verse.rb", "app/models/scripture_verse.rb"
       migration_template "create_scripture_references.rb", "db/migrate/create_scripture_references.rb"
     end
   end
