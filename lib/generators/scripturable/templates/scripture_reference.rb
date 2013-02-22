@@ -66,7 +66,7 @@ class ScriptureReference < ActiveRecord::Base
           if chapter_exists? scripture_book, verse_number
             scripture_chapter = find_scripture_chapter(chapter_number)
             if verse_number.present?
-              if 1..scripture_chapter['verse_count']).include? verse_number
+              if (1..scripture_chapter['verse_count']).include? verse_number
                 "Scripture reference exists"
               else
                 "Book does not exist"
