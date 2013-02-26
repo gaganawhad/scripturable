@@ -9,8 +9,8 @@ describe ScriptureVerse do
 
 
     it 'should initializse the scripture reference when the format is valid' do
-      lambda {ScriptureVerse.new("8:12:14")}.should_not raise_error(RuntimeError,"Scripture reference does not follow the format: '<book-number>(:<chapter-number>(:<verse-number>))'")
-      @scripture_reference = ScriptureVerse.new("8:12:14")
+      lambda {@scripture_verse = ScriptureVerse.new("8:12:14")}.should_not raise_error(RuntimeError,"Scripture reference does not follow the format: '<book-number>(:<chapter-number>(:<verse-number>))'")
+      @scripture_verse.should be_present
     end
 
   end
