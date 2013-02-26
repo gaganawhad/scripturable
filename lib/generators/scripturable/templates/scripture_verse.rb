@@ -7,12 +7,8 @@ class ScriptureVerse
   end
   
   def exists?
-
   end
   
-  def book_exists?
-  end
-
   def chapter_exists?
   end
 
