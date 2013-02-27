@@ -3,6 +3,7 @@ class ScriptureVerse
 
   def initialize scripture_verse
     raise "Scripture reference does not follow the format: '<book-number>(:<chapter-number>(:<verse-number>))'" unless follows_format? scripture_verse
+    raise "Verse does not exist in scripture" unless exists?
     @book_number, @chapter_number, @verse_number = scripture_verse.scan(SCRIPTURE_VERSE_FORMAT).flatten.compact.map(&:to_i)
   end
   
