@@ -19,17 +19,17 @@ describe ScriptureVerse do
 
     it 'returns a true when 35 is passed ' do
       @scripture_verse = ScriptureVerse.new("35:4:5") 
-      @scripture_verse.book_exists?.should be_true
+      @scripture_verse.send(:book_exists?).should be_true
     end
 
     it 'returns a true when the book number is 66' do
       @scripture_verse = ScriptureVerse.new("66:4:5") 
-      @scripture_verse.book_exists?.should be_true
+      @scripture_verse.send(:book_exists?).should be_true
     end
 
     it 'returns a false when 67 is passed ' do
       @scripture_verse = ScriptureVerse.new("67:4:5") 
-      @scripture_verse.book_exists?.should be_false
+      @scripture_verse.send(:book_exists?).should be_false
     end
 
   end
@@ -39,13 +39,13 @@ describe ScriptureVerse do
     it 'returns a true when 35 is passed ' do
       #1 John does not have chapter 6 does not exist
       @scripture_verse = ScriptureVerse.new("62:6:4") 
-      @scripture_verse.chapter_exists?.should be_false
+      @scripture_verse.send(:chapter_exists?).should be_false
     end
 
     it 'returns a true when the book number is 66' do
       #1 John does not have chapter 5 does not exist
       @scripture_verse = ScriptureVerse.new("62:5:5") 
-      @scripture_verse.chapter_exists?.should be_true
+      @scripture_verse.send(:chapter_exists?).should be_true
     end
 
   end
@@ -55,13 +55,13 @@ describe ScriptureVerse do
     it 'returns a true when 35 is passed ' do
       #1 John does not have chapter 6 does not exist
       @scripture_verse = ScriptureVerse.new("62:5:22") 
-      @scripture_verse.verse_exists?.should be_false
+      @scripture_verse.send(:verse_exists?).should be_false
     end
 
     it 'returns a true when the book number is 66' do
       #1 John does not have chapter 5 does not exist
       @scripture_verse = ScriptureVerse.new("62:5:21") 
-      @scripture_verse.verse_exists?.should be_true
+      @scripture_verse.send(:verse_exists?).should be_true
     end
 
   end
@@ -71,28 +71,29 @@ describe ScriptureVerse do
     it 'returns a true when 35 is passed ' do
       #1 John does not have chapter 6 does not exist
       @scripture_verse = ScriptureVerse.new("62:5:22") 
-      @scripture_verse.exists?.should be_false
+      @scripture_verse.send(:exists?).should be_false
     end
 
     it 'returns a true when 35 is passed ' do
       #1 John does not have chapter 6 does not exist
       @scripture_verse = ScriptureVerse.new("62:6:4") 
-      @scripture_verse.exists?.should be_false
+      @scripture_verse.send(:exists?).should be_false
     end
 
     it 'returns a true when the book number is 66' do
       #1 John does not have chapter 5 does not exist
       @scripture_verse = ScriptureVerse.new("68:5:21") 
-      @scripture_verse.exists?.should be_false
+      @scripture_verse.send(:exists?).should be_false
     end
 
     it 'returns a true when the book number is 66' do
       #1 John does not have chapter 5 does not exist
       @scripture_verse = ScriptureVerse.new("62:5:21") 
-      @scripture_verse.exists?.should be_true
+      @scripture_verse.send(:exists?).should be_true
     end
 
   end
+
 
 
 
