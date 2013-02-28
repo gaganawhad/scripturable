@@ -7,6 +7,8 @@ class ScriptureVerse
     @book_number, @chapter_number, @verse_number = scripture_verse.scan(SCRIPTURE_VERSE_FORMAT).flatten.compact.map(&:to_i)
   end
   
+  protected
+
   def exists?
     book_exists? && chapter_exists? && verse_exists?
   end
@@ -30,9 +32,6 @@ class ScriptureVerse
   def chapter_hash
     @chapter_hash ||= book_hash['chapters'].find{|chapter| chapter['chapter_number'] == @chapter_number}
   end
-
-  protected
-
 
   def follows_format? reference
     reference.scan(SCRIPTURE_VERSE_FORMAT).any?
