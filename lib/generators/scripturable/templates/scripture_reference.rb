@@ -39,6 +39,10 @@ class ScriptureReference < ActiveRecord::Base
     self.end_at = @end_verse.to_i
   end
 
+  def include?(verse)
+    start_at < verse && verse < end_at
+  end
+
  end
 
 
