@@ -23,9 +23,9 @@ class ScriptureReference < ActiveRecord::Base
 
   def end_verse
     if new_record?
-      @start_verse ||= ScriptureVerse.new
+      @end_verse ||= ScriptureVerse.new
     else 
-      @start_verse ||= ScriptureVerse.new(end_at)
+      @end_verse ||= ScriptureVerse.new(end_at)
     end
   end
 
