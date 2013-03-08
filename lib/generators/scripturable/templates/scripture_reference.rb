@@ -8,6 +8,10 @@ class ScriptureReference < ActiveRecord::Base
   validates_presence_of :start_verse
   validates_presence_of :end_verse
 
+  def self.that_include(integer)
+    where("scripture_references.start_at <= #{integer}").where("scripture_references.end_at >= #{integer}") if integer.is_a?(Fixnum)
+  end
+
   def start_verse
     if new_record?
       @start_verse ||= ScriptureVerse.new
