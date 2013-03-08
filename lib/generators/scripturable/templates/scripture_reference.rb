@@ -15,28 +15,29 @@ class ScriptureReference < ActiveRecord::Base
     if new_record?
       @start_verse ||= ScriptureVerse.new
     else 
-      @start_verse ||= ScriptureVerse.new
+      @start_verse ||= ScriptureVerse.new(start_at)
     end
   end
 
 
   def end_verse
     if new_record?
-      @start_verse ||= ScriptureReference.new
+      @start_verse ||= ScriptureVerse.new
     else 
-      @start_verse ||= ScriptureReference.new
+      @start_verse ||= ScriptureVerse.new(end_at)
     end
   end
 
   def start_verse= value
-    @start_verse ||= ScriptureReference.new value
-    debugger
+    @start_verse ||= ScriptureVerse.new(value)
     self.start_at = @start_verse.to_i
   end
 
-  def end_verse= params
-    @end_verse ||= ScriptureReference.new value
+  def end_verse= value
+    @end_verse ||= ScriptureVerse.new(value)
     self.end_at = @end_verse.to_i
   end
 
-end
+ end
+
+
