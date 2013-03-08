@@ -1,4 +1,5 @@
 class ScriptureReference < ActiveRecord::Base
+  attr_accessible :start_verse, :end_verse
 
   REFERENCE_FORMAT = /^(\d+)(?::(\d+))?(?::(\d+))?$/ #http://rubular.com/r/7axgNYfYiK
 
