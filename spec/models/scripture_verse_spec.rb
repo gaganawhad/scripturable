@@ -94,6 +94,26 @@ describe ScriptureVerse do
 
   end
 
+  describe '#to_i' do 
+    context 'converts the scripture verse to a unique decimal integer' do
+
+      it 'converts Gen 1:1 to 1,001,001' do
+        @scripture_verse = ScriptureVerse.new("1:1:1") 
+        @scripture_verse.to_i.should == 1001001
+      end
+
+      it 'converts Rev 22:21 to 66,022,021' do
+        @scripture_verse = ScriptureVerse.new("66:22:21") 
+        @scripture_verse.to_i.should == 66022021
+      end
+
+      it 'converts Psalm 119:176 to 19,119,176' do
+        @scripture_verse = ScriptureVerse.new("19:119:176") 
+        @scripture_verse.to_i.should == 19119176
+      end
+
+    end
+  end
 
 
 
