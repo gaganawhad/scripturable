@@ -1,13 +1,17 @@
 class ScriptureVerse
   SCRIPTURE_VERSE_FORMAT = /^(\d+)(?::(\d+))?(?::(\d+))?$/ #http://rubular.com/r/7axgNYfYiK
 
-  def initialize book_number=nil, chapter_number=nil, verse_number=nil
+  def initialize values=0
     # raise "Scripture reference does not follow the format: '<book-number>(:<chapter-number>(:<verse-number>))'" unless follows_format? scripture_verse
     # raise "Verse does not exist in scripture" unless exists?
 #   @book_number, @chapter_number, @verse_number = scripture_verse.scan(SCRIPTURE_VERSE_FORMAT).flatten.compact.map(&:to_i)
-    @book_number, @chapter_number, @verse_number = book_number.to_i, chapter_number.to_i, verse_number.to_i
+    @book_number, @chapter_number, @verse_number = values['book'].to_i , values['chapter'].to_i, values['verse'].to_i if values.is_a?(Hash)
+    if values.is_a?(Fixnum)
+      quotient, @verse_number = values.divmod(1000) 
+      @book_number, @chapter_number = (quotient).divmod(1000) 
+    end
   end
-
+  
   def to_i
     @book_number * 1000000 + @chapter_number * 1000 + @verse_number
   end
@@ -41,4 +45,6 @@ class ScriptureVerse
   def follows_format? reference
     reference.scan(SCRIPTURE_VERSE_FORMAT).any?
   end
+
 end
+
