@@ -32,6 +32,16 @@ class ScriptureVerse
     book_hash['name']
   end
 
+  def to_hash
+    {
+      :book_number => book_number,
+      :chapter_number => chapter_number,
+      :verse_number => verse_number,
+      :book_name => book_name
+    }
+  end
+    
+  
   protected
 
   def exists?

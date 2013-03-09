@@ -43,6 +43,13 @@ class ScriptureReference < ActiveRecord::Base
     start_at < verse && verse < end_at
   end
 
+  def reference_hash
+    {
+      :start => start_verse.to_hash,
+      :end => end_verse.to_hash
+    }
+  end
+
  end
 
 
