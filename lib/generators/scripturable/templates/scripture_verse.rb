@@ -15,7 +15,23 @@ class ScriptureVerse
   def to_i
     @book_number * 1000000 + @chapter_number * 1000 + @verse_number
   end
-  
+
+  def book_number
+    @book_number
+  end
+
+  def chapter_number
+    @book_number
+  end
+
+  def verse_number
+    @book_number
+  end
+
+  def book_name
+    book_hash['name']
+  end
+
   protected
 
   def exists?
