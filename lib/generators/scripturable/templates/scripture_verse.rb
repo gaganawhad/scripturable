@@ -21,11 +21,11 @@ class ScriptureVerse
   end
 
   def chapter_number
-    @book_number
+    @chapter_number
   end
 
   def verse_number
-    @book_number
+    @verse_number
   end
 
   def book_name
