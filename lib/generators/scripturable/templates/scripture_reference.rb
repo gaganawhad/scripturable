@@ -1,5 +1,5 @@
 class ScriptureReference < ActiveRecord::Base
-  attr_accessible :start_verse, :end_verse
+  attr_accessible :delimiters
 
   REFERENCE_FORMAT = /^(\d+)(?::(\d+))?(?::(\d+))?$/ #http://rubular.com/r/7axgNYfYiK
 
@@ -29,13 +29,10 @@ class ScriptureReference < ActiveRecord::Base
     end
   end
 
-  def start_verse= value
-    @start_verse ||= ScriptureVerse.new(value)
+  def delimiters= hash
+    @start_verse = ScriptureVerse.new({'book_number' => hash[:book], 'chapter_number' => hash[:start_chapter], 'verse_number' => hash[:start_verse] })
+    @end_verse = ScriptureVerse.new({'book_number' => hash[:book], 'chapter_number' => hash[:end_chapter], 'verse_number' => hash[:end_verse] })
     self.start_at = @start_verse.to_i
-  end
-
-  def end_verse= value
-    @end_verse ||= ScriptureVerse.new(value)
     self.end_at = @end_verse.to_i
   end
 
@@ -43,11 +40,18 @@ class ScriptureReference < ActiveRecord::Base
     start_at < verse && verse < end_at
   end
 
-  def reference_hash
+  def to_hash
     {
-      :start => start_verse.to_hash,
-      :end => end_verse.to_hash
+      :book => start_verse.book_number,
+      :start_chapter => start_verse.chapter_number,
+      :start_verse => start_verse.verse_number,
+      :end_chapter => end_verse.chapter_number,
+      :end_verse => end_verse.verse_number
     }
+  end
+
+  def delimiters
+    OpenStruct.new(reference_hash)
   end
 
  end
