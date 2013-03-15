@@ -42,6 +42,7 @@ class ScriptureReference < ActiveRecord::Base
 
   def to_hash
     {
+      :book_name => start_verse.book_name,
       :book => start_verse.book_number,
       :start_chapter => start_verse.chapter_number,
       :start_verse => start_verse.verse_number,
