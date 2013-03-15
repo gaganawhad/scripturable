@@ -5,9 +5,6 @@ class ScriptureReference < ActiveRecord::Base
 
   belongs_to :scripturable, :polymorphic => true
 
-  validates_presence_of :start_verse
-  validates_presence_of :end_verse
-
   def self.that_include(integer)
     where("scripture_references.start_at <= #{integer}").where("scripture_references.end_at >= #{integer}") if integer.is_a?(Fixnum)
   end
