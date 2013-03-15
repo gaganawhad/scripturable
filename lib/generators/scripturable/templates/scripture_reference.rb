@@ -10,12 +10,12 @@ class ScriptureReference < ActiveRecord::Base
   end
 
   def start_verse
-    @start_verse ||= ScriptureVerse.new(start_at)
+    ScriptureVerse.new(start_at)
   end
 
 
   def end_verse
-    @end_verse ||= ScriptureVerse.new(end_at)
+    ScriptureVerse.new(end_at)
   end
 
   def delimiters= hash
