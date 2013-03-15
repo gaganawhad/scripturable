@@ -3,9 +3,25 @@ require 'spec_helper'
 describe ScriptureVerse do
   describe '#initialize' do
 
-    it 'should initializse the scripture reference when the format is valid' do
-      lambda {@scripture_verse = ScriptureVerse.new("8:12:14")}.should_not raise_error(RuntimeError,"Scripture reference does not follow the format: '<book-number>(:<chapter-number>(:<verse-number>))'")
-      @scripture_verse.should be_present
+    it 'sets book, chapter and verse numbers to 0 on initialization without passing any arguments' do
+      @scripture_verse = ScriptureVerse.new
+      @scripture_verse.book_number.should == 0 
+      @scripture_verse.chapter_number.should == 0 
+      @scripture_verse.verse_number.should == 0 
+    end
+
+    it 'sets book, chapter and verse numbers corectly when an apporpiate Fixnum argument is passed to it' do
+      @scripture_verse = ScriptureVerse.new(19119176)
+      @scripture_verse.book_number.should == 19
+      @scripture_verse.chapter_number.should == 119 
+      @scripture_verse.verse_number.should == 176
+    end
+
+    it 'sets book, chapter and verse numbers correctly when an appropirate hash argument is passed to it' do
+      @scripture_verse = ScriptureVerse.new({'book_number' => 19,  'chapter_number' => 119, 'verse_number' => 176})
+      @scripture_verse.book_number.should == 19
+      @scripture_verse.chapter_number.should == 119 
+      @scripture_verse.verse_number.should == 176
     end
 
   end

@@ -2,14 +2,8 @@ class ScriptureVerse
   SCRIPTURE_VERSE_FORMAT = /^(\d+)(?::(\d+))?(?::(\d+))?$/ #http://rubular.com/r/7axgNYfYiK
 
   def initialize values=0
-    # raise "Scripture reference does not follow the format: '<book-number>(:<chapter-number>(:<verse-number>))'" unless follows_format? scripture_verse
-    # raise "Verse does not exist in scripture" unless exists?
-#   @book_number, @chapter_number, @verse_number = scripture_verse.scan(SCRIPTURE_VERSE_FORMAT).flatten.compact.map(&:to_i)
+    values = resolve values if values.is_a?(Fixnum)
     @book_number, @chapter_number, @verse_number = values['book_number'].to_i , values['chapter_number'].to_i, values['verse_number'].to_i if values.is_a?(Hash)
-    if values.is_a?(Fixnum)
-      quotient, @verse_number = values.divmod(1000) 
-      @book_number, @chapter_number = (quotient).divmod(1000) 
-    end
   end
   
   def to_i
@@ -40,6 +34,14 @@ class ScriptureVerse
       :book_name => book_name
     }
   end
+
+  def resolve number
+    resolution = {}
+    quotient, resolution['verse_number'] = number.divmod(1000) 
+    resolution['book_number'], resolution['chapter_number'] = (quotient).divmod(1000) 
+    resolution
+  end
+  
     
   
   protected
