@@ -4,6 +4,7 @@ class ScriptureReference < ActiveRecord::Base
   REFERENCE_FORMAT = /^(\d+)(?::(\d+))?(?::(\d+))?$/ #http://rubular.com/r/7axgNYfYiK
 
   belongs_to :scripturable, :polymorphic => true
+  validate :existence_of_scripture_verses
 
   def self.that_include(integer)
     where("scripture_references.start_at <= #{integer}").where("scripture_references.end_at >= #{integer}") if integer.is_a?(Fixnum)

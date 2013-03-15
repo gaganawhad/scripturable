@@ -1,9 +1,12 @@
 class ScriptureVerse
-  SCRIPTURE_VERSE_FORMAT = /^(\d+)(?::(\d+))?(?::(\d+))?$/ #http://rubular.com/r/7axgNYfYiK
+# SCRIPTURE_VERSE_FORMAT = /^(\d+)(?::(\d+))?(?::(\d+))?$/ #http://rubular.com/r/7axgNYfYiK
+  SCRIPTURE_VERSE_FORMAT = /^(\d+):(\d+):(\d+)$/ 
+
 
   def initialize values=nil
+    values = parse_verse(values) if values.is_a?(String)
     values = resolve values if values.is_a?(Fixnum)
-    @book_number, @chapter_number, @verse_number = values['book_number'].to_i , values['chapter_number'].to_i, values['verse_number'].to_i if values.is_a?(Hash)
+    @book_number, @chapter_number, @verse_number = values['book_number'], values['chapter_number'], values['verse_number'] if values.is_a?(Hash)
   end
   
   def book_number
@@ -70,7 +73,13 @@ class ScriptureVerse
     @chapter_hash ||= book_hash['chapters'].find{|chapter| chapter['chapter_number'] == @chapter_number}
   end
 
+  def parse_verse string
+    raise "arugment is a string but does not follow the format: '<book-number>(:<chapter-number>(:<verse-number>))" unless follows_format? string
+    Hash[['book_number', 'chapter_number', 'verse_number'].zip(string.scan(SCRIPTURE_VERSE_FORMAT).flatten.compact.map(&:to_i))]
+  end
+
   def follows_format? reference
+    return true if reference.blank?
     reference.scan(SCRIPTURE_VERSE_FORMAT).any?
   end
 

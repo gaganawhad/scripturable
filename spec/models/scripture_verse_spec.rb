@@ -3,8 +3,15 @@ require 'spec_helper'
 describe ScriptureVerse do
   describe '#initialize' do
 
-    it 'sets book, chapter and verse numbers to 0 on initialization without passing any arguments' do
+    it 'sets book, chapter and verse numbers to nil on initialization without passing any arguments' do
       @scripture_verse = ScriptureVerse.new
+      @scripture_verse.book_number.should == nil
+      @scripture_verse.chapter_number.should == nil 
+      @scripture_verse.verse_number.should == nil 
+    end
+
+    it 'sets book, chapter and verse numbers to nil on initialization with an empty string' do
+      @scripture_verse = ScriptureVerse.new("")
       @scripture_verse.book_number.should == nil
       @scripture_verse.chapter_number.should == nil 
       @scripture_verse.verse_number.should == nil 
