@@ -6,10 +6,6 @@ class ScriptureVerse
     @book_number, @chapter_number, @verse_number = values['book_number'].to_i , values['chapter_number'].to_i, values['verse_number'].to_i if values.is_a?(Hash)
   end
   
-  def to_i
-    @book_number * 1000000 + @chapter_number * 1000 + @verse_number
-  end
-
   def book_number
     @book_number
   end
@@ -33,6 +29,10 @@ class ScriptureVerse
       :verse_number => verse_number,
       :book_name => book_name
     }
+  end
+
+  def to_i
+    @book_number * 1000000 + @chapter_number * 1000 + @verse_number
   end
 
   def resolve number
