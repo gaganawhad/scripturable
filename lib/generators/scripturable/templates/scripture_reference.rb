@@ -10,20 +10,12 @@ class ScriptureReference < ActiveRecord::Base
   end
 
   def start_verse
-    if new_record?
-      @start_verse ||= ScriptureVerse.new
-    else 
-      @start_verse ||= ScriptureVerse.new(start_at)
-    end
+    @start_verse ||= ScriptureVerse.new(start_at)
   end
 
 
   def end_verse
-    if new_record?
-      @end_verse ||= ScriptureVerse.new
-    else 
-      @end_verse ||= ScriptureVerse.new(end_at)
-    end
+    @end_verse ||= ScriptureVerse.new(end_at)
   end
 
   def delimiters= hash

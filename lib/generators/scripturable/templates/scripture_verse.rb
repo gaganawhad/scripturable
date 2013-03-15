@@ -1,7 +1,7 @@
 class ScriptureVerse
   SCRIPTURE_VERSE_FORMAT = /^(\d+)(?::(\d+))?(?::(\d+))?$/ #http://rubular.com/r/7axgNYfYiK
 
-  def initialize values=0
+  def initialize values=nil
     values = resolve values if values.is_a?(Fixnum)
     @book_number, @chapter_number, @verse_number = values['book_number'].to_i , values['chapter_number'].to_i, values['verse_number'].to_i if values.is_a?(Hash)
   end
