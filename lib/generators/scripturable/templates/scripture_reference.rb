@@ -42,7 +42,7 @@ class ScriptureReference < ActiveRecord::Base
   end
 
   def delimiters
-    OpenStruct.new(reference_hash)
+    OpenStruct.new(self.to_hash)
   end
 
   def scripture_verses_should_exist
