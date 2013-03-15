@@ -4,7 +4,7 @@ class ScriptureReference < ActiveRecord::Base
   REFERENCE_FORMAT = /^(\d+)(?::(\d+))?(?::(\d+))?$/ #http://rubular.com/r/7axgNYfYiK
 
   belongs_to :scripturable, :polymorphic => true
-  validate :existence_of_scripture_verses
+  validate :scripture_verses_should_exist
 
   def self.that_include(integer)
     where("scripture_references.start_at <= #{integer}").where("scripture_references.end_at >= #{integer}") if integer.is_a?(Fixnum)
@@ -43,6 +43,12 @@ class ScriptureReference < ActiveRecord::Base
 
   def delimiters
     OpenStruct.new(reference_hash)
+  end
+
+  def scripture_verses_should_exist
+    if !start_verse.exists? || !end_verse.exists?
+      errors.add(:base, "Scripture reference does not exist") 
+    end
   end
 
  end
