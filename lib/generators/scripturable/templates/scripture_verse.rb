@@ -22,7 +22,7 @@ class ScriptureVerse
   end
 
   def book_name
-    book_hash['name']
+    book_hash['name'] unless book_hash.nil?
   end
 
   def to_hash
