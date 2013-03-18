@@ -31,6 +31,13 @@ describe ScriptureVerse do
       @scripture_verse.verse_number.should == 176
     end
 
+    it 'sets book, chapter and verse numbers to itegral values when hash argument values are a string' do
+      @scripture_verse = ScriptureVerse.new({'book_number' => "19",  'chapter_number' => "119", 'verse_number' => "176"})
+      @scripture_verse.book_number.should == 19
+      @scripture_verse.chapter_number.should == 119 
+      @scripture_verse.verse_number.should == 176
+    end
+
   end
 
   describe '#book_exists?' do

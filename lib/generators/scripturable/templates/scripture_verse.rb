@@ -6,7 +6,10 @@ class ScriptureVerse
   def initialize values=nil
     values = parse_verse(values) if values.is_a?(String)
     values = resolve values if values.is_a?(Fixnum)
-    @book_number, @chapter_number, @verse_number = values['book_number'], values['chapter_number'], values['verse_number'] if values.is_a?(Hash)
+    if values.is_a?(Hash)
+      values.each{ |k, v| values[k] = v.to_i unless v.nil? }
+      @book_number, @chapter_number, @verse_number = values['book_number'], values['chapter_number'], values['verse_number']
+    end
   end
   
   def book_number
