@@ -48,13 +48,12 @@ class ScriptureVerse
     resolution
   end
   
-    
-  
-  protected
-
   def exists?
     book_exists? && chapter_exists? && verse_exists?
   end
+    
+  
+  protected
 
   def book_exists?
     (1..66).include? @book_number #66 books in the Bible
