@@ -68,7 +68,7 @@ class ScriptureVerse
   end
 
   def book_hash
-    @book_hash ||= Scripturable::SCRIPTURE_META.find{|book| book['book_number'] == @book_number}
+    @book_hash ||= Scripturable::SCRIPTURE_BOOKS_META.find{|book| book['book_number'] == @book_number}
   end
 
   def chapter_hash
