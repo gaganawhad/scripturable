@@ -1,5 +1,6 @@
 module Scripturable
-SCRIPTURE_BOOKS_META = [ {"number"=>1,
+SCRIPTURE_BOOKS_META = [ 
+  { "number"=>1,
     "abbr"=>"GEN",
     "name"=>"Genesis",
     "chapters"=>
