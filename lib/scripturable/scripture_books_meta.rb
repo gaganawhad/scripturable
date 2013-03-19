@@ -3,6 +3,7 @@ SCRIPTURE_BOOKS_META = [
   { "number"=>1,
     "abbr"=>"GEN",
     "name"=>"Genesis",
+    "string_id"=>"genesis",
     "chapters"=>
     [ {"number"=>1, "verses"=>31},
       {"number"=>2, "verses"=>25},
@@ -57,6 +58,7 @@ SCRIPTURE_BOOKS_META = [
   {"number"=>2,
     "abbr"=>"EXO",
     "name"=>"Exodus",
+    "string_id"=>"exodus",
     "chapters"=>
     [ {"number"=>1, "verses"=>22},
       {"number"=>2, "verses"=>25},
@@ -101,6 +103,7 @@ SCRIPTURE_BOOKS_META = [
   {"number"=>3,
     "abbr"=>"LEV",
     "name"=>"Leviticus",
+    "string_id"=>"leviticus",
     "chapters"=>
     [ {"number"=>1, "verses"=>17},
       {"number"=>2, "verses"=>16},
@@ -132,6 +135,7 @@ SCRIPTURE_BOOKS_META = [
   {"number"=>4,
     "abbr"=>"NUM",
     "name"=>"Numbers",
+    "string_id"=>"numbers",
     "chapters"=>
     [ {"number"=>1, "verses"=>54},
       {"number"=>2, "verses"=>34},
@@ -172,6 +176,7 @@ SCRIPTURE_BOOKS_META = [
   {"number"=>5,
     "abbr"=>"DEU",
     "name"=>"Deuteronomy",
+    "string_id"=>"deuteronomy",
     "chapters"=>
     [ {"number"=>1, "verses"=>46},
       {"number"=>2, "verses"=>37},
@@ -210,6 +215,7 @@ SCRIPTURE_BOOKS_META = [
   {"number"=>6,
     "abbr"=>"JOS",
     "name"=>"Joshua",
+    "string_id"=>"joshua",
     "chapters"=>
     [ {"number"=>1, "verses"=>18},
       {"number"=>2, "verses"=>24},
@@ -238,6 +244,7 @@ SCRIPTURE_BOOKS_META = [
   {"number"=>7,
     "abbr"=>"JDG",
     "name"=>"Judges",
+    "string_id"=>"judges",
     "chapters"=>
     [ {"number"=>1, "verses"=>36},
       {"number"=>2, "verses"=>23},
@@ -263,6 +270,7 @@ SCRIPTURE_BOOKS_META = [
   {"number"=>8,
     "abbr"=>"RUT",
     "name"=>"Ruth",
+    "string_id"=>"ruth",
     "chapters"=>
     [ {"number"=>1, "verses"=>22},
       {"number"=>2, "verses"=>23},
@@ -271,6 +279,7 @@ SCRIPTURE_BOOKS_META = [
   {"number"=>9,
     "abbr"=>"1SA",
     "name"=>"1 Samuel",
+    "string_id"=>"1-samuel",
     "chapters"=>
     [ {"number"=>1, "verses"=>28},
       {"number"=>2, "verses"=>36},
@@ -306,6 +315,7 @@ SCRIPTURE_BOOKS_META = [
   {"number"=>10,
     "abbr"=>"2SA",
     "name"=>"2 Samuel",
+    "string_id"=>"2-samuel",
     "chapters"=>
     [ {"number"=>1, "verses"=>27},
       {"number"=>2, "verses"=>32},
@@ -334,6 +344,7 @@ SCRIPTURE_BOOKS_META = [
   {"number"=>11,
     "abbr"=>"1KG",
     "name"=>"1 Kings",
+    "string_id"=>"1-kings",
     "chapters"=>
     [ {"number"=>1, "verses"=>53},
       {"number"=>2, "verses"=>46},
@@ -360,6 +371,7 @@ SCRIPTURE_BOOKS_META = [
   {"number"=>12,
     "abbr"=>"2KG",
     "name"=>"2 Kings",
+    "string_id"=>"2-kings",
     "chapters"=>
     [ {"number"=>1, "verses"=>18},
       {"number"=>2, "verses"=>25},
@@ -389,6 +401,7 @@ SCRIPTURE_BOOKS_META = [
   {"number"=>13,
     "abbr"=>"1KR",
     "name"=>"1 Chronicles",
+    "string_id"=>"1-chronicles",
     "chapters"=>
     [ {"number"=>1, "verses"=>54},
       {"number"=>2, "verses"=>55},
@@ -422,6 +435,7 @@ SCRIPTURE_BOOKS_META = [
   {"number"=>14,
     "abbr"=>"2KR",
     "name"=>"2 Chronicles",
+    "string_id"=>"2-chronicles",
     "chapters"=>
     [ {"number"=>1, "verses"=>17},
       {"number"=>2, "verses"=>18},
@@ -462,6 +476,7 @@ SCRIPTURE_BOOKS_META = [
   {"number"=>15,
     "abbr"=>"EZR",
     "name"=>"Ezra",
+    "string_id"=>"ezra",
     "chapters"=>
     [ {"number"=>1, "verses"=>11},
       {"number"=>2, "verses"=>70},
@@ -476,6 +491,7 @@ SCRIPTURE_BOOKS_META = [
   {"number"=>16,
     "abbr"=>"NEH",
     "name"=>"Nehemiah",
+    "string_id"=>"nehemiah",
     "chapters"=>
     [ {"number"=>1, "verses"=>11},
       {"number"=>2, "verses"=>20},
@@ -493,6 +509,7 @@ SCRIPTURE_BOOKS_META = [
   {"number"=>17,
     "abbr"=>"EST",
     "name"=>"Esther",
+    "string_id"=>"esther",
     "chapters"=>
     [ {"number"=>1, "verses"=>22},
       {"number"=>2, "verses"=>23},
@@ -507,6 +524,7 @@ SCRIPTURE_BOOKS_META = [
   {"number"=>18,
     "abbr"=>"JOB",
     "name"=>"Job",
+    "string_id"=>"job",
     "chapters"=>
     [ {"number"=>1, "verses"=>22},
       {"number"=>2, "verses"=>13},
@@ -553,6 +571,7 @@ SCRIPTURE_BOOKS_META = [
   {"number"=>19,
     "abbr"=>"PSA",
     "name"=>"Psalms",
+    "string_id"=>"psalms",
     "chapters"=>
     [ {"number"=>1, "verses"=>6},
       {"number"=>2, "verses"=>12},
@@ -707,6 +726,7 @@ SCRIPTURE_BOOKS_META = [
   {"number"=>20,
     "abbr"=>"PRO",
     "name"=>"Proverbs",
+    "string_id"=>"proverbs",
     "chapters"=>
     [ {"number"=>1, "verses"=>33},
       {"number"=>2, "verses"=>22},
@@ -742,6 +762,7 @@ SCRIPTURE_BOOKS_META = [
   {"number"=>21,
     "abbr"=>"ECC",
     "name"=>"Ecclesiastes",
+    "string_id"=>"ecclesiastes",
     "chapters"=>
     [ {"number"=>1, "verses"=>18},
       {"number"=>2, "verses"=>26},
@@ -757,7 +778,8 @@ SCRIPTURE_BOOKS_META = [
       {"number"=>12, "verses"=>14}]},
   {"number"=>22,
     "abbr"=>"SO",
-    "name"=>"Song",
+    "name"=>"Song of Solomon",
+    "string_id"=>"song-of-solomon",
     "chapters"=>
     [ {"number"=>1, "verses"=>17},
       {"number"=>2, "verses"=>17},
@@ -770,6 +792,7 @@ SCRIPTURE_BOOKS_META = [
   {"number"=>23,
     "abbr"=>"ISA",
     "name"=>"Isaiah",
+    "string_id"=>"isaiah",
     "chapters"=>
     [ {"number"=>1, "verses"=>31},
       {"number"=>2, "verses"=>22},
@@ -840,6 +863,7 @@ SCRIPTURE_BOOKS_META = [
   {"number"=>24,
     "abbr"=>"JER",
     "name"=>"Jeremiah",
+    "string_id"=>"jeremiah",
     "chapters"=>
     [ {"number"=>1, "verses"=>19},
       {"number"=>2, "verses"=>37},
@@ -896,6 +920,7 @@ SCRIPTURE_BOOKS_META = [
   {"number"=>25,
     "abbr"=>"LAM",
     "name"=>"Lamentations",
+    "string_id"=>"lamentations",
     "chapters"=>
     [ {"number"=>1, "verses"=>22},
       {"number"=>2, "verses"=>22},
@@ -905,6 +930,7 @@ SCRIPTURE_BOOKS_META = [
   {"number"=>26,
     "abbr"=>"EZE",
     "name"=>"Ezekiel",
+    "string_id"=>"ezekiel",
     "chapters"=>
     [ {"number"=>1, "verses"=>28},
       {"number"=>2, "verses"=>10},
@@ -957,6 +983,7 @@ SCRIPTURE_BOOKS_META = [
   {"number"=>27,
     "abbr"=>"DAN",
     "name"=>"Daniel",
+    "string_id"=>"daniel",
     "chapters"=>
     [ {"number"=>1, "verses"=>21},
       {"number"=>2, "verses"=>49},
@@ -973,6 +1000,7 @@ SCRIPTURE_BOOKS_META = [
   {"number"=>28,
     "abbr"=>"HOS",
     "name"=>"Hosea",
+    "string_id"=>"hosea",
     "chapters"=>
     [ {"number"=>1, "verses"=>11},
       {"number"=>2, "verses"=>23},
@@ -991,6 +1019,7 @@ SCRIPTURE_BOOKS_META = [
   {"number"=>29,
     "abbr"=>"JOE",
     "name"=>"Joel",
+    "string_id"=>"joel",
     "chapters"=>
     [ {"number"=>1, "verses"=>20},
       {"number"=>2, "verses"=>32},
@@ -998,6 +1027,7 @@ SCRIPTURE_BOOKS_META = [
   {"number"=>30,
     "abbr"=>"AMO",
     "name"=>"Amos",
+    "string_id"=>"amos",
     "chapters"=>
     [ {"number"=>1, "verses"=>15},
       {"number"=>2, "verses"=>16},
@@ -1011,10 +1041,12 @@ SCRIPTURE_BOOKS_META = [
   {"number"=>31,
     "abbr"=>"OBA",
     "name"=>"Obadiah",
+    "string_id"=>"obadiah",
     "chapters"=>[{"number"=>1, "verses"=>21}]},
   {"number"=>32,
     "abbr"=>"JON",
     "name"=>"Jonah",
+    "string_id"=>"jonah",
     "chapters"=>
     [ {"number"=>1, "verses"=>17},
       {"number"=>2, "verses"=>10},
@@ -1023,6 +1055,7 @@ SCRIPTURE_BOOKS_META = [
   {"number"=>33,
     "abbr"=>"MIC",
     "name"=>"Micah",
+    "string_id"=>"micah",
     "chapters"=>
     [ {"number"=>1, "verses"=>16},
       {"number"=>2, "verses"=>13},
@@ -1034,6 +1067,7 @@ SCRIPTURE_BOOKS_META = [
   {"number"=>34,
     "abbr"=>"NAH",
     "name"=>"Nahum",
+    "string_id"=>"nahum",
     "chapters"=>
     [ {"number"=>1, "verses"=>15},
       {"number"=>2, "verses"=>13},
@@ -1041,6 +1075,7 @@ SCRIPTURE_BOOKS_META = [
   {"number"=>35,
     "abbr"=>"HAB",
     "name"=>"Habakkuk",
+    "string_id"=>"habakkuk",
     "chapters"=>
     [ {"number"=>1, "verses"=>17},
       {"number"=>2, "verses"=>20},
@@ -1048,6 +1083,7 @@ SCRIPTURE_BOOKS_META = [
   {"number"=>36,
     "abbr"=>"ZEP",
     "name"=>"Zephaniah",
+    "string_id"=>"zephaniah",
     "chapters"=>
     [ {"number"=>1, "verses"=>18},
       {"number"=>2, "verses"=>15},
@@ -1055,12 +1091,14 @@ SCRIPTURE_BOOKS_META = [
   {"number"=>37,
     "abbr"=>"HAG",
     "name"=>"Haggai",
+    "string_id"=>"haggai",
     "chapters"=>
     [ {"number"=>1, "verses"=>15}, 
       {"number"=>2, "verses"=>23}]},
   {"number"=>38,
     "abbr"=>"ZEC",
     "name"=>"Zechariah",
+    "string_id"=>"zechariah",
     "chapters"=>
     [ {"number"=>1, "verses"=>21},
       {"number"=>2, "verses"=>13},
@@ -1079,6 +1117,7 @@ SCRIPTURE_BOOKS_META = [
   {"number"=>39,
     "abbr"=>"MAL",
     "name"=>"Malachi",
+    "string_id"=>"malachi",
     "chapters"=>
     [ {"number"=>1, "verses"=>14},
       {"number"=>2, "verses"=>17},
@@ -1087,6 +1126,7 @@ SCRIPTURE_BOOKS_META = [
   {"number"=>40,
     "abbr"=>"MAT",
     "name"=>"Matthew",
+    "string_id"=>"matthew",
     "chapters"=>
     [ {"number"=>1, "verses"=>25},
       {"number"=>2, "verses"=>23},
@@ -1119,6 +1159,7 @@ SCRIPTURE_BOOKS_META = [
   {"number"=>41,
     "abbr"=>"MAR",
     "name"=>"Mark",
+    "string_id"=>"mark",
     "chapters"=>
     [ {"number"=>1, "verses"=>45},
       {"number"=>2, "verses"=>28},
@@ -1139,6 +1180,7 @@ SCRIPTURE_BOOKS_META = [
   {"number"=>42,
     "abbr"=>"LUK",
     "name"=>"Luke",
+    "string_id"=>"luke",
     "chapters"=>
     [ {"number"=>1, "verses"=>80},
       {"number"=>2, "verses"=>52},
@@ -1167,6 +1209,7 @@ SCRIPTURE_BOOKS_META = [
   {"number"=>43,
     "abbr"=>"JOH",
     "name"=>"John",
+    "string_id"=>"john",
     "chapters"=>
     [ {"number"=>1, "verses"=>51},
       {"number"=>2, "verses"=>25},
@@ -1192,6 +1235,7 @@ SCRIPTURE_BOOKS_META = [
   {"number"=>44,
     "abbr"=>"ACT",
     "name"=>"Acts",
+    "string_id"=>"acts",
     "chapters"=>
     [ {"number"=>1, "verses"=>26},
       {"number"=>2, "verses"=>47},
@@ -1224,6 +1268,7 @@ SCRIPTURE_BOOKS_META = [
   {"number"=>45,
     "abbr"=>"ROM",
     "name"=>"Romans",
+    "string_id"=>"romans",
     "chapters"=>
     [ {"number"=>1, "verses"=>32},
       {"number"=>2, "verses"=>29},
@@ -1244,6 +1289,7 @@ SCRIPTURE_BOOKS_META = [
   {"number"=>46,
     "abbr"=>"1CO",
     "name"=>"1 Corinthians",
+    "string_id"=>"1-corinthians",
     "chapters"=>
     [ {"number"=>1, "verses"=>31},
       {"number"=>2, "verses"=>16},
@@ -1264,6 +1310,7 @@ SCRIPTURE_BOOKS_META = [
   {"number"=>47,
     "abbr"=>"2CO",
     "name"=>"2 Corinthians",
+    "string_id"=>"2-corinthians",
     "chapters"=>
     [ {"number"=>1, "verses"=>24},
       {"number"=>2, "verses"=>17},
@@ -1281,6 +1328,7 @@ SCRIPTURE_BOOKS_META = [
   {"number"=>48,
     "abbr"=>"GAL",
     "name"=>"Galatians",
+    "string_id"=>"galatians",
     "chapters"=>
     [ {"number"=>1, "verses"=>24},
       {"number"=>2, "verses"=>21},
@@ -1291,6 +1339,7 @@ SCRIPTURE_BOOKS_META = [
   {"number"=>49,
     "abbr"=>"EPH",
     "name"=>"Ephesians",
+    "string_id"=>"ephesians",
     "chapters"=>
     [ {"number"=>1, "verses"=>23},
       {"number"=>2, "verses"=>22},
@@ -1301,6 +1350,7 @@ SCRIPTURE_BOOKS_META = [
   {"number"=>50,
     "abbr"=>"PHI",
     "name"=>"Philippians",
+    "string_id"=>"philippians",
     "chapters"=>
     [ {"number"=>1, "verses"=>30},
       {"number"=>2, "verses"=>30},
@@ -1309,6 +1359,7 @@ SCRIPTURE_BOOKS_META = [
   {"number"=>51,
     "abbr"=>"COL",
     "name"=>"Colossians",
+    "string_id"=>"colossians",
     "chapters"=>
     [ {"number"=>1, "verses"=>29},
       {"number"=>2, "verses"=>23},
@@ -1317,6 +1368,7 @@ SCRIPTURE_BOOKS_META = [
   {"number"=>52,
     "abbr"=>"1TH",
     "name"=>"1 Thessalonians",
+    "string_id"=>"1-thessalonians",
     "chapters"=>
     [ {"number"=>1, "verses"=>10},
       {"number"=>2, "verses"=>20},
@@ -1326,6 +1378,7 @@ SCRIPTURE_BOOKS_META = [
   {"number"=>53,
     "abbr"=>"2TH",
     "name"=>"2 Thessalonians",
+    "string_id"=>"2-thessalonians",
     "chapters"=>
     [ {"number"=>1, "verses"=>12},
       {"number"=>2, "verses"=>17},
@@ -1333,6 +1386,7 @@ SCRIPTURE_BOOKS_META = [
   {"number"=>54,
     "abbr"=>"1TI",
     "name"=>"1 Timothy",
+    "string_id"=>"1-timothy",
     "chapters"=>
     [ {"number"=>1, "verses"=>20},
       {"number"=>2, "verses"=>15},
@@ -1343,6 +1397,7 @@ SCRIPTURE_BOOKS_META = [
   {"number"=>55,
     "abbr"=>"2TI",
     "name"=>"2 Timothy",
+    "string_id"=>"2-timothy",
     "chapters"=>
     [ {"number"=>1, "verses"=>18},
       {"number"=>2, "verses"=>26},
@@ -1351,6 +1406,7 @@ SCRIPTURE_BOOKS_META = [
   {"number"=>56,
     "abbr"=>"TIT",
     "name"=>"Titus",
+    "string_id"=>"titus",
     "chapters"=>
     [ {"number"=>1, "verses"=>16},
       {"number"=>2, "verses"=>15},
@@ -1358,10 +1414,12 @@ SCRIPTURE_BOOKS_META = [
   {"number"=>57,
     "abbr"=>"PHM",
     "name"=>"Philemon",
+    "string_id"=>"philemon",
     "chapters"=>[{"number"=>1, "verses"=>25}]},
   {"number"=>58,
     "abbr"=>"HEB",
     "name"=>"Hebrews",
+    "string_id"=>"hebrews",
     "chapters"=>
     [ {"number"=>1, "verses"=>14},
       {"number"=>2, "verses"=>18},
@@ -1379,6 +1437,7 @@ SCRIPTURE_BOOKS_META = [
   {"number"=>59,
     "abbr"=>"JAM",
     "name"=>"James",
+    "string_id"=>"james",
     "chapters"=>
     [ {"number"=>1, "verses"=>27},
       {"number"=>2, "verses"=>26},
@@ -1388,6 +1447,7 @@ SCRIPTURE_BOOKS_META = [
   {"number"=>60,
     "abbr"=>"1PE",
     "name"=>"1 Peter",
+    "string_id"=>"1-peter",
     "chapters"=>
     [ {"number"=>1, "verses"=>25},
       {"number"=>2, "verses"=>25},
@@ -1397,6 +1457,7 @@ SCRIPTURE_BOOKS_META = [
   {"number"=>61,
     "abbr"=>"2PE",
     "name"=>"2 Peter",
+    "string_id"=>"2-peter",
     "chapters"=>
     [ {"number"=>1, "verses"=>21},
       {"number"=>2, "verses"=>22},
@@ -1404,6 +1465,7 @@ SCRIPTURE_BOOKS_META = [
   {"number"=>62,
     "abbr"=>"1JO",
     "name"=>"1 John",
+    "string_id"=>"1-john",
     "chapters"=>
     [ {"number"=>1, "verses"=>10},
       {"number"=>2, "verses"=>29},
@@ -1413,18 +1475,22 @@ SCRIPTURE_BOOKS_META = [
   {"number"=>63,
     "abbr"=>"2JO",
     "name"=>"2 John",
+    "string_id"=>"2-john",
     "chapters"=>[{"number"=>1, "verses"=>13}]},
   {"number"=>64,
     "abbr"=>"3JO",
     "name"=>"3 John",
+    "string_id"=>"3-john",
     "chapters"=>[{"number"=>1, "verses"=>15}]},
   {"number"=>65,
     "abbr"=>"JUD",
     "name"=>"Jude",
+    "string_id"=>"jude",
     "chapters"=>[{"number"=>1, "verses"=>25}]},
   {"number"=>66,
     "abbr"=>"REV",
     "name"=>"Revelation",
+    "string_id"=>"revelation",
     "chapters"=>
     [ {"number"=>1, "verses"=>20},
       {"number"=>2, "verses"=>29},
