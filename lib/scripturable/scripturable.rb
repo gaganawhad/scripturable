@@ -28,6 +28,20 @@ module Scripturable
         self.includes(:scripture_references).where("scripture_references.start_at >= #{book_number * 1000000} AND scripture_references.start_at < #{(book_number + 1) * 1000000}").uniq
       end
 
+      def self.span_scripture_book_numbers
+        self.joins(:scripture_references).pluck('scripture_references.start_at').map{|ref| ref / 1000000}
+      end
+
+      def self.scripture_spectrum
+        uniq_book_numbers = self.span_scripture_book_numbers.uniq
+        Scripturable::SCRIPTURE_BOOKS_META.select{|b| book_numbers.include? b['number']}.map{|a| {'number' => a['number'], 'name' => a['name']}}
+      end
+
+      def self.scripture_histogram
+        book_numbers = self.span_scripture_book_numbers
+        Hash[book_numbers.uniq.map{|r| [r, book_numbers.count(r)]}]
+      end
+
     end
   end
 
