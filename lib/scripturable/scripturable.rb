@@ -34,7 +34,7 @@ module Scripturable
 
       def self.scripture_spectrum
         uniq_book_numbers = self.span_scripture_book_numbers.uniq
-        Scripturable::SCRIPTURE_BOOKS_META.select{|b| book_numbers.include? b['number']}.map{|a| {'number' => a['number'], 'name' => a['name']}}
+        Scripturable::SCRIPTURE_BOOKS_META.select{|b| uniq_book_numbers.include? b['number']}.map{|a| {'number' => a['number'], 'name' => a['name']}}
       end
 
       def self.scripture_histogram
