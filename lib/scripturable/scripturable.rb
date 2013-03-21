@@ -25,7 +25,7 @@ module Scripturable
           raise "book #{book} was not found" unless book.between?(1,66)
           book
         end
-        self.includes(:scripture_references).where("scripture_references.start_at >= #{book_number * 1000000} AND scripture_references.start_at < #{(book_number + 1) * 1000000}").uniq
+        self.joins(:scripture_references).where("scripture_references.start_at >= #{book_number * 1000000} AND scripture_references.start_at < #{(book_number + 1) * 1000000}").uniq
       end
 
       #NOTE specifically converting ref to integer to provide a quick work around for an AR bug in postgres - https://github.com/rails/rails/issues/1718 
