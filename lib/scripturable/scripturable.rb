@@ -28,8 +28,10 @@ module Scripturable
         self.includes(:scripture_references).where("scripture_references.start_at >= #{book_number * 1000000} AND scripture_references.start_at < #{(book_number + 1) * 1000000}").uniq
       end
 
+      #NOTE specifically converting ref to integer to provide a quick work around for an AR bug in postgres - https://github.com/rails/rails/issues/1718 
+      #It should be fixed in rails 4 
       def self.span_scripture_book_numbers
-        self.joins(:scripture_references).pluck('scripture_references.start_at').map{|ref| ref / 1000000}
+        self.joins(:scripture_references).pluck('scripture_references.start_at').map{|ref| ref.to_i / 1000000}
       end
 
       def self.scripture_spectrum
