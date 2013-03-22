@@ -64,15 +64,15 @@ class ScriptureVerse
   end
 
   def verse_exists?
-    (1..chapter_hash['verse_count']).include? @verse_number 
+    (1..chapter_hash['verses']).include? @verse_number 
   end
 
   def book_hash
-    @book_hash ||= Scripturable::SCRIPTURE_BOOKS_META.find{|book| book['book_number'] == @book_number}
+    @book_hash ||= Scripturable::SCRIPTURE_BOOKS_META.find{|book| book['number'] == @book_number}
   end
 
   def chapter_hash
-    @chapter_hash ||= book_hash['chapters'].find{|chapter| chapter['chapter_number'] == @chapter_number}
+    @chapter_hash ||= book_hash['chapters'].find{|chapter| chapter['number'] == @chapter_number}
   end
 
   def parse_verse string
