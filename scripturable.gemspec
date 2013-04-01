@@ -8,9 +8,9 @@ require "scripturable/version"
 Gem::Specification.new do |gem|
   gem.authors       = ["Gagan Awhad"]
   gem.email         = ["gaganaawhad@gmail.com"]
-  gem.description   = %q{TODO: Write a gem description}
-  gem.summary       = %q{TODO: Write a gem summary}
-  gem.homepage      = %q{TODO: Give a homepage url}
+  gem.description   = %q{Ruby gem that provides common operations based around scripture meta-data}
+  gem.summary       = %q{Ruby gem that provides common operations based around scripture meta-data}
+  gem.homepage      = %q{https://www.github.com/gaganawhad/scripturable}
 
   gem.files         = `git ls-files`.split($\)
   gem.files = Dir["{app,config,db,lib}/**/*"] + ["LICENSE", "Rakefile", "README.md"]
