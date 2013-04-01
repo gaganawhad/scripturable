@@ -7,7 +7,7 @@ require "scripturable/version"
 
 Gem::Specification.new do |gem|
   gem.authors       = ["Gagan Awhad"]
-  gem.email         = ["gagan.awhad@desiringgod.org"]
+  gem.email         = ["gaganaawhad@gmail.com"]
   gem.description   = %q{TODO: Write a gem description}
   gem.summary       = %q{TODO: Write a gem summary}
   gem.homepage      = %q{TODO: Give a homepage url}
