@@ -13,7 +13,7 @@ Gem::Specification.new do |gem|
   gem.homepage      = %q{TODO: Give a homepage url}
 
   gem.files         = `git ls-files`.split($\)
-  gem.files = Dir["{app,config,db,lib}/**/*"] + ["MIT-LICENSE", "Rakefile", "README.rdoc"]
+  gem.files = Dir["{app,config,db,lib}/**/*"] + ["LICENSE", "Rakefile", "README.md"]
   gem.executables   = gem.files.grep(%r{^bin/}).map{ |f| File.basename(f) }
   gem.test_files    = gem.files.grep(%r{^(test|spec|features)/})
   gem.name          = "scripturable"
