@@ -19,7 +19,7 @@ Gem::Specification.new do |gem|
   gem.name          = "scripturable"
   gem.require_paths = ["lib"]
   gem.version       = Scripturable::VERSION
-  gem.add_dependency "rails", "~> 3.2.9"
+  gem.add_dependency "rails"
   gem.add_development_dependency "sqlite3"
   gem.add_development_dependency "rspec-rails"
 end
